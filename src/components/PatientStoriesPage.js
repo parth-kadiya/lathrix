@@ -36,19 +36,19 @@ const PatientStoriesPage = () => (
     <Section>
       <LeftContent>
         <Label>PATIENT STORIES</Label>
-        <Title>Proven Results with VANNI for Acne</Title>
+        <Title>Visible Grey Hair Reduction with LaThrix</Title>
         <Subtitle>
-          4 out of 5 people achieved clearer skin after just two months!<sup>1</sup>
+          Up to 56% decrease in white hair after 4 months of use.<sup>1</sup>
         </Subtitle>
         <CaptionWrapper>
-          <Caption>Tap play to dive into our patient testimonials</Caption>
+          <Caption>Tap play to hear real experiences with LaThrix Serum</Caption>
           <Arrow>—›</Arrow>
         </CaptionWrapper>
       </LeftContent>
 
       <RightContent>
         <ImageWrapper>
-          <MockupImage src={mockupSrc} alt="VANNI patient testimonial mockup" />
+          <MockupImage src={mockupSrc} alt="LaThrix patient testimonial mockup" />
           <PlayButton>▶</PlayButton>
         </ImageWrapper>
       </RightContent>
@@ -56,19 +56,19 @@ const PatientStoriesPage = () => (
 
     {/* ——— Hear from Patients nav ——— */}
     <TestimonialsSection>
-      <TestHeading>Hear from Patients Like You</TestHeading>
+      <TestHeading>Hear from People Like You</TestHeading>
       <TestNav>
         <TestButton bg="#E18FFF">
           <ButtonImage src={deanPortrait} alt="Dean thumbnail" />
-          <ButtonLabel>View Dean’s Story</ButtonLabel>
+          <ButtonLabel>View Dean’s Grey Hair Journey</ButtonLabel>
         </TestButton>
         <TestButton bg="#FFD700">
           <ButtonImage src={cassiePortrait} alt="Cassie thumbnail" />
-          <ButtonLabel>View Cassie’s Story</ButtonLabel>
+          <ButtonLabel>View Cassie’s LaThrix Story</ButtonLabel>
         </TestButton>
         <TestButton bg="#FFD700">
           <ButtonImage src={sammyPortrait} alt="Sammy thumbnail" />
-          <ButtonLabel>View Sammy’s Story</ButtonLabel>
+          <ButtonLabel>View Sammy’s Repigmentation Results</ButtonLabel>
         </TestButton>
       </TestNav>
 
