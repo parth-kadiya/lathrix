@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import GlobalStyle from './styles/GlobalStyles';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -36,31 +36,21 @@ function HairGreying() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <GlobalStyle />
       <Header />
 
       <Routes>
-        {/* Redirect root to Home */}
         <Route path="/" element={<Navigate to="/lathrix" replace />} />
-
-        {/* Home page */}
         <Route path="/lathrix" element={<Home />} />
-
-        {/* Hair Greying page */}
         <Route path="/hair-greying" element={<HairGreying />} />
         <Route path="/about-lathrix" element={<AboutLathrix />} />
         <Route path="/patient-stories" element={<PatientStoriesPage />} />
         <Route path="/starting-lathrix" element={<StartingLathrixPage />} />
-
-        {/* Stub routes for the rest (keep header & nav intact,
-            you can fill these later) */}
         <Route path="/resources" element={<Resources />} />
-
-        {/* Fallback to home */}
         <Route path="*" element={<Navigate to="/lathrix" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
