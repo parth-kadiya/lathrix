@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lathrix/static/css/main.e6c13ad2.css",
-    "main.js": "/lathrix/static/js/main.95a9dc6f.js",
+    "main.js": "/lathrix/static/js/main.3ce8a93a.js",
     "static/js/453.ad34b821.chunk.js": "/lathrix/static/js/453.ad34b821.chunk.js",
     "static/media/story3.png": "/lathrix/static/media/story3.c9683b555bacb72437e7.png",
     "static/media/story1.png": "/lathrix/static/media/story1.f6b1e00559c9485de7f5.png",
@@ -26,11 +26,11 @@
     "static/media/testimonial.mp4": "/lathrix/static/media/testimonial.f99b2f0c7c532c75c0b7.mp4",
     "index.html": "/lathrix/index.html",
     "main.e6c13ad2.css.map": "/lathrix/static/css/main.e6c13ad2.css.map",
-    "main.95a9dc6f.js.map": "/lathrix/static/js/main.95a9dc6f.js.map",
+    "main.3ce8a93a.js.map": "/lathrix/static/js/main.3ce8a93a.js.map",
     "453.ad34b821.chunk.js.map": "/lathrix/static/js/453.ad34b821.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.95a9dc6f.js"
+    "static/js/main.3ce8a93a.js"
   ]
 }
