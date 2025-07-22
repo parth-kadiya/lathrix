@@ -12,7 +12,7 @@ import logoSrc from '../assets/logo.png';
 const Header = () => {
   const [open, setOpen] = useState(false);
   const navItems = [
-    { name: 'Home', to: '/home' },
+    { name: 'Home', to: '/lathrix' },
     { name: 'Hair Greying', to: '/hair-greying' },
     { name: 'About LÀTHRIX', to: '/about-lathrix' },
     { name: 'Patient Stories', to: '/patient-stories' },
@@ -27,7 +27,7 @@ const Header = () => {
       {/* Desktop nav hidden on mobile */}
       <MobileNav>
         {navItems.map(item => (
-          <DesktopNavItem key={item.to} to={item.to} end={item.to === '/home'}>
+          <DesktopNavItem key={item.to} to={item.to} end={item.to === '/lathrix'}>
             {item.name}
           </DesktopNavItem>
         ))}
@@ -45,7 +45,7 @@ const Header = () => {
             <DesktopNavItem
               key={item.to}
               to={item.to}
-              end={item.to === '/home'}
+              end={item.to === '/lathrix'}
               onClick={() => setOpen(false)}
             >
               {item.name}

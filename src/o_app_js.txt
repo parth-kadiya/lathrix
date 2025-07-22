@@ -42,10 +42,10 @@ function App() {
 
       <Routes>
         {/* Redirect root to Home */}
-        <Route path="/" element={<Navigate to="/lathrix" replace />} />
+        <Route path="/" element={<Navigate to="/home" replace />} />
 
         {/* Home page */}
-        <Route path="/lathrix" element={<Home />} />
+        <Route path="/home" element={<Home />} />
 
         {/* Hair Greying page */}
         <Route path="/hair-greying" element={<HairGreying />} />
@@ -58,7 +58,7 @@ function App() {
         <Route path="/resources" element={<Resources />} />
 
         {/* Fallback to home */}
-        <Route path="*" element={<Navigate to="/lathrix" replace />} />
+        <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
     </BrowserRouter>
   );
