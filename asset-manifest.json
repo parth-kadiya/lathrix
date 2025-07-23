@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/lathrix/static/css/main.e6c13ad2.css",
-    "main.js": "/lathrix/static/js/main.3ce8a93a.js",
+    "main.js": "/lathrix/static/js/main.1bba54c9.js",
     "static/js/453.ad34b821.chunk.js": "/lathrix/static/js/453.ad34b821.chunk.js",
     "static/media/story3.png": "/lathrix/static/media/story3.c9683b555bacb72437e7.png",
     "static/media/story1.png": "/lathrix/static/media/story1.f6b1e00559c9485de7f5.png",
-    "static/media/vanni-patient.jpg": "/lathrix/static/media/vanni-patient.69ec90463c5ea0a82240.jpg",
-    "static/media/vanni-who.png": "/lathrix/static/media/vanni-who.dedd1b4a77777f538b1a.png",
-    "static/media/vanni-how.png": "/lathrix/static/media/vanni-how.7b93a089d2ba8ba9c54f.png",
+    "static/media/lathrix-patient.jpg": "/lathrix/static/media/lathrix-patient.69ec90463c5ea0a82240.jpg",
+    "static/media/lathrix-who.png": "/lathrix/static/media/lathrix-who.dedd1b4a77777f538b1a.png",
+    "static/media/lathrix-how.png": "/lathrix/static/media/lathrix-how.7b93a089d2ba8ba9c54f.png",
     "static/media/story2.png": "/lathrix/static/media/story2.24642649f14e834862b3.png",
     "static/media/story4.png": "/lathrix/static/media/story4.dd461727dfccb0d14d72.png",
     "static/media/hair.png": "/lathrix/static/media/hair.d0d9f78858f179cf1a94.png",
@@ -26,11 +26,11 @@
     "static/media/testimonial.mp4": "/lathrix/static/media/testimonial.f99b2f0c7c532c75c0b7.mp4",
     "index.html": "/lathrix/index.html",
     "main.e6c13ad2.css.map": "/lathrix/static/css/main.e6c13ad2.css.map",
-    "main.3ce8a93a.js.map": "/lathrix/static/js/main.3ce8a93a.js.map",
+    "main.1bba54c9.js.map": "/lathrix/static/js/main.1bba54c9.js.map",
     "453.ad34b821.chunk.js.map": "/lathrix/static/js/453.ad34b821.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.3ce8a93a.js"
+    "static/js/main.1bba54c9.js"
   ]
 }
