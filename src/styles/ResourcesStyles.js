@@ -105,6 +105,7 @@ export const StoryImage = styled.img`
   display: block;
   width: 100%;
   height: auto;
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
 
   ${mobileStyles.StoryImage}
 `

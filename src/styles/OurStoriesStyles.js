@@ -1,10 +1,13 @@
-// src/styles/OurStoriesStyles.js
 import styled from 'styled-components';
 
 export const Section = styled.section`
   background: #FFD700;
   padding: 80px 20px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 60px 16px;            /* root padding on mobile */
+  }
 `;
 
 export const Heading = styled.h2`
@@ -43,6 +46,12 @@ export const Card = styled.div`
 
   &:hover {
     transform: translateY(-5px);
+  }
+
+  /* MOBILE: shrink & center every card */
+  @media (max-width: 768px) {
+    max-width: 300px;          /* adjust to taste */
+    margin: 0 auto 24px;
   }
 `;
 

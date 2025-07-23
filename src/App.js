@@ -7,13 +7,14 @@ import Hero from './components/Hero';
 import PatientStories from './components/PatientStories';
 import OurStories from './components/OurStories';
 import ExploreLathrix from './components/ExploreLathrix';
-import Acne from './components/Acne';
+import HairGreying from './components/HairGreying'; // ✅ Renamed import
 import Science from './components/Science';
 import AboutLathrix from './components/AboutLathrix';
 import PatientStoriesPage from './components/PatientStoriesPage';
 import StartingLathrixPage from './components/StartingLathrixPage';
 import Resources from './components/Resources';
 
+// ✅ Home route component
 function Home() {
   return (
     <>
@@ -25,15 +26,17 @@ function Home() {
   );
 }
 
-function HairGreying() {
+// ✅ HairGreying page component using the imported component
+function HairGreyingPage() {
   return (
     <>
-      <Acne />
+      <HairGreying />
       <Science />
     </>
   );
 }
 
+// ✅ Main App component with all routes
 function App() {
   return (
     <HashRouter>
@@ -43,7 +46,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/lathrix" replace />} />
         <Route path="/lathrix" element={<Home />} />
-        <Route path="/hair-greying" element={<HairGreying />} />
+        <Route path="/hair-greying" element={<HairGreyingPage />} />
         <Route path="/about-lathrix" element={<AboutLathrix />} />
         <Route path="/patient-stories" element={<PatientStoriesPage />} />
         <Route path="/starting-lathrix" element={<StartingLathrixPage />} />

@@ -23,8 +23,9 @@ import {
   VideoWrapper,
   VideoPlayer
 } from '../styles/PatientStoriesPageStyles';
+import PatientStoriesPageMedia from '../styles/PatientStoriesPageMedia';
 
-import mockupSrc from '../assets/vanni-patient.jpg';
+import mockupSrc from '../assets/lathrix-patient.jpg';
 import deanPortrait from '../assets/dean.png';
 import cassiePortrait from '../assets/cassie.png';
 import sammyPortrait from '../assets/sammy.png';
@@ -32,6 +33,9 @@ import testimonialVideo from '../assets/testimonial.mp4';
 
 const PatientStoriesPage = () => (
   <>
+    {/* inject mobile overrides */}
+    <PatientStoriesPageMedia />
+
     {/* ——— Proven Results block ——— */}
     <Section>
       <LeftContent>
@@ -48,7 +52,10 @@ const PatientStoriesPage = () => (
 
       <RightContent>
         <ImageWrapper>
-          <MockupImage src={mockupSrc} alt="LaThrix patient testimonial mockup" />
+          <MockupImage
+            src={mockupSrc}
+            alt="LaThrix patient testimonial mockup"
+          />
           <PlayButton>▶</PlayButton>
         </ImageWrapper>
       </RightContent>

@@ -1,4 +1,4 @@
-// src/styles/AcneMedia.js
+// src/styles/HairGreyingMedia.js
 
 import styled from 'styled-components';
 import {
@@ -12,7 +12,7 @@ import {
   ListItem as BaseListItem,
   ImageWrapper as BaseImageWrapper,
   StyledImage as BaseStyledImage
-} from './AcneStyles';
+} from './HairGreyingStyles';
 
 const MOBILE = '@media (max-width: 480px)';
 
@@ -35,42 +35,40 @@ export const SmallLabel = styled(BaseSmallLabel)`
   ${MOBILE} {
     font-size: 0.75rem;
     margin-bottom: 4px;
-        padding-left: 16px;
-
+    padding-left: 16px;
   }
 `;
 
 export const Heading = styled(BaseHeading)`
   ${MOBILE} {
-    font-size: 2rem;
+    font-size: 2.5rem;    /* mobile heading size */
     line-height: 1.2;
     margin-bottom: 16px;
-        padding-left: 16px;
-
+    padding-left: 16px;
+    text-align: left;
   }
 `;
 
 export const Text = styled(BaseText)`
   ${MOBILE} {
-    font-size: 1.1rem;
+    font-size: 0.95rem;   /* mobile paragraph size */
     margin-bottom: 24px;
-        padding-left: 16px;
-
+    padding-left: 16px;
+    text-align: left;
   }
 `;
 
 export const FactsTitle = styled(BaseFactsTitle)`
   ${MOBILE} {
-    font-size: 1.1rem;
+    font-size: 1.2rem;    /* mobile facts title size */
     margin-bottom: 12px;
-        padding-left: 16px;
-
+    padding-left: 16px;
   }
 `;
 
 export const List = styled(BaseList)`
   ${MOBILE} {
-    font-size: 1.1rem;
+    font-size: 0.95rem;   /* mobile list item size */
     margin-bottom: 24px;
     padding-left: 16px;
   }
@@ -87,12 +85,15 @@ export const ImageWrapper = styled(BaseImageWrapper)`
     flex: 1 1 100%;
     max-width: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 `;
 
 export const StyledImage = styled(BaseStyledImage)`
   ${MOBILE} {
-    width: 100%;
+    width: 80%;          /* shrink image on mobile */
+    max-width: 300px;
     height: auto;
   }
 `;

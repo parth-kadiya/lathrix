@@ -1,16 +1,36 @@
 // src/components/Header.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import {
   HeaderContainer,
   Logo,
   NavItem as DesktopNavItem,
 } from '../styles/HeaderStyles';
-import { ToggleButton, Sidebar, SidebarNav, MobileNav } from '../styles/HeaderMedia';
+import {
+  ToggleButton,
+  Sidebar,
+  SidebarNav,
+  MobileNav
+} from '../styles/HeaderMedia';
+import { FiMenu, FiX } from 'react-icons/fi';
 import logoSrc from '../assets/logo.png';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+
+  // Prevent background scrolling when sidebar is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    // Cleanup when component unmounts
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   const navItems = [
     { name: 'Home', to: '/lathrix' },
     { name: 'Hair Greying', to: '/hair-greying' },
@@ -27,7 +47,11 @@ const Header = () => {
       {/* Desktop nav hidden on mobile */}
       <MobileNav>
         {navItems.map(item => (
-          <DesktopNavItem key={item.to} to={item.to} end={item.to === '/lathrix'}>
+          <DesktopNavItem
+            key={item.to}
+            to={item.to}
+            end={item.to === '/lathrix'}
+          >
             {item.name}
           </DesktopNavItem>
         ))}
@@ -35,7 +59,7 @@ const Header = () => {
 
       {/* hamburger / close button on mobile */}
       <ToggleButton onClick={() => setOpen(o => !o)}>
-        {open ? '✕' : '☰'}
+        {open ? <FiX size="1.5em" /> : <FiMenu size="1.5em" />}
       </ToggleButton>
 
       {/* sliding sidebar */}

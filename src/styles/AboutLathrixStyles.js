@@ -63,8 +63,8 @@ export const ImageWrapper = styled.div`
   width: 100%;
   border-radius: 12px;
   overflow: hidden;
-  /* yellow glow shadow */
   box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
+  margin: 0 auto; /* center horizontally */
 `;
 
 export const StyledImage = styled.img`
@@ -73,7 +73,7 @@ export const StyledImage = styled.img`
   height: auto;
 `;
 
-/* ——— New "Who Can Take VANNI?" section ——— */
+/* ——— "Who Can Use LaThrix?" styles ——— */
 export const WhoSection = styled.section`
   display: flex;
   flex-wrap: wrap-reverse;
@@ -91,11 +91,11 @@ export const WhoImageWrapper = styled.div`
   max-width: 480px;
   width: 100%;
   overflow: hidden;
-  /* same yellow glow shadow */
   box-shadow: 0 0 40px rgba(255, 215, 0, 0.8);
-  /* optional gradient fade if desired—otherwise remove */
   background: radial-gradient(circle at bottom center, transparent 60%, #101820 100%);
   position: relative;
+  margin: 0 auto; /* center horizontally */
+  border-radius: 20px;
 `;
 
 export const WhoStyledImage = styled.img`

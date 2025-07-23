@@ -2,13 +2,13 @@ import React from 'react';
 import {
   Section,
   Content,
-  Heading,
-  Text,
   Buttons,
   Button,
   PortraitWrapper,
   PortraitImage
 } from '../styles/ExploreLathrixStyles';
+// ← point Heading and Text at the media file:
+import { Heading, Text } from '../styles/ExploreLathrixMedia';
 
 import groupImg from '../assets/group.png';
 

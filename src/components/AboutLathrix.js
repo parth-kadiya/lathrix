@@ -19,11 +19,15 @@ import {
   WhoImageWrapper,
   WhoStyledImage
 } from '../styles/AboutLathrixStyles';
-import howImg from '../assets/vanni-how.png';   // Replace with: lathrix-how.png
-import whoImg from '../assets/vanni-who.png';   // Replace with: lathrix-who.png
+import AboutLathrixMedia from '../styles/AboutLathrixMedia';
+
+import howImg from '../assets/lathrix-how.png';
+import whoImg from '../assets/lathrix-who.png';
 
 const AboutLathrix = () => (
   <>
+    <AboutLathrixMedia />
+
     {/* ——— How Does LaThrix Work? ——— */}
     <Section>
       <Content>

@@ -8,10 +8,11 @@ import {
   DecorativeCircle
 } from './HeroStyles';
 
-/* Section height shrinks on mobile */
+/* Section height shrinks on mobile and adds root padding */
 export const ResponsiveHeroSection = styled(HeroSection)`
   @media (max-width: 768px) {
     height: 60vh;
+    padding: 60px 32px !important;
   }
 `;
 
@@ -19,7 +20,7 @@ export const ResponsiveHeroSection = styled(HeroSection)`
 export const ResponsiveHeroText = styled(HeroText)`
   @media (max-width: 768px) {
     & > div {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 `;
@@ -34,7 +35,7 @@ export const ResponsiveHighlighted = styled(Highlighted)`
 /* Glow line scales down */
 export const ResponsiveGlowText = styled(GlowText)`
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `;
 

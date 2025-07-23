@@ -17,7 +17,7 @@ export const ToggleButton = styled.button`
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #fff;
+  color: #FFD700;         /* theme‑yellow for icons */
   cursor: pointer;
   position: relative;
   z-index: 1100;           /* above the sidebar */

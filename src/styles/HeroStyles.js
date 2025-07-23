@@ -14,6 +14,7 @@ export const HeroSection = styled.section`
   justify-content: center;
   position: relative;
   overflow: visible;
+  padding: 0 32px;    /* ← desktop side padding */
 `;
 
 export const HeroText = styled.div`

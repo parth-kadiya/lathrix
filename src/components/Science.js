@@ -7,7 +7,7 @@ import {
   Tagline,
   ButtonWrapper,
   ActionButton
-} from '../styles/ScienceStyles';
+} from '../styles/ScienceMedia';
 
 const Science = () => (
   <Section>

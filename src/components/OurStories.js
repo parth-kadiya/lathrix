@@ -1,5 +1,5 @@
 // src/components/OurStories.js
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   Section,
   Heading,
@@ -13,7 +13,6 @@ import {
   Tag,
   StartButton
 } from '../styles/OurStoriesStyles';
-
 import {
   CarouselWrapper,
   SlidesContainer,
@@ -21,6 +20,7 @@ import {
   DotContainer,
   Dot
 } from '../styles/OurStoriesMedia';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 import story1 from '../assets/story1.png';
 import story2 from '../assets/story2.png';
@@ -37,9 +37,35 @@ const stories = [
 const OurStories = () => {
   const [current, setCurrent] = useState(0);
   const lastIndex = stories.length - 1;
+  const touchStartX = useRef(0);
+  const touchDeltaX = useRef(0);
+  const swipeThreshold = 50; // minimum px to count as swipe
 
-  const goPrev = () => setCurrent(c => (c === 0 ? lastIndex : c - 1));
-  const goNext = () => setCurrent(c => (c === lastIndex ? 0 : c + 1));
+  const goPrev = () => {
+    if (current > 0) setCurrent(c => c - 1);
+  };
+
+  const goNext = () => {
+    if (current < lastIndex) setCurrent(c => c + 1);
+  };
+
+  const handleTouchStart = e => {
+    touchStartX.current = e.touches[0].clientX;
+    touchDeltaX.current = 0;
+  };
+
+  const handleTouchMove = e => {
+    touchDeltaX.current = e.touches[0].clientX - touchStartX.current;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchDeltaX.current > swipeThreshold) {
+      goPrev();
+    } else if (touchDeltaX.current < -swipeThreshold) {
+      goNext();
+    }
+    touchDeltaX.current = 0;
+  };
 
   return (
     <Section>
@@ -48,13 +74,17 @@ const OurStories = () => {
 
       {/* Desktop grid */}
       <CardsWrapper>
-        {stories.map((s,i) => (
+        {stories.map((s, i) => (
           <Card key={i} bg={s.bg}>
-            <ImageWrapper bg={s.bg}><img src={s.img} alt={s.title} /></ImageWrapper>
+            <ImageWrapper bg={s.bg}>
+              <img src={s.img} alt={s.title} />
+            </ImageWrapper>
             <Content>
               <Title>{s.title}</Title>
-              <Tags>{s.tags.map((t,idx)=><Tag key={idx}>{t}</Tag>)}</Tags>
-              <StartButton>Start ></StartButton>
+              <Tags>
+                {s.tags.map((t, idx) => <Tag key={idx}>{t}</Tag>)}
+              </Tags>
+              <StartButton>Start &gt;</StartButton>
             </Content>
           </Card>
         ))}
@@ -62,15 +92,24 @@ const OurStories = () => {
 
       {/* Mobile carousel */}
       <CarouselWrapper>
-        <SlidesContainer style={{ transform: `translateX(-${current * 100}%)` }}>
-          {stories.map((s,i) => (
+        <SlidesContainer
+          style={{ transform: `translateX(-${current * 100}%)` }}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {stories.map((s, i) => (
             <Slide key={i} bg={s.bg}>
               <Card bg={s.bg}>
-                <ImageWrapper bg={s.bg}><img src={s.img} alt={s.title} /></ImageWrapper>
+                <ImageWrapper bg={s.bg}>
+                  <img src={s.img} alt={s.title} />
+                </ImageWrapper>
                 <Content>
                   <Title>{s.title}</Title>
-                  <Tags>{s.tags.map((t,idx)=><Tag key={idx}>{t}</Tag>)}</Tags>
-                  <StartButton>Start ></StartButton>
+                  <Tags>
+                    {s.tags.map((t, idx) => <Tag key={idx}>{t}</Tag>)}
+                  </Tags>
+                  <StartButton>Start &gt;</StartButton>
                 </Content>
               </Card>
             </Slide>
@@ -80,9 +119,17 @@ const OurStories = () => {
 
       {/* Prev · Next navigation */}
       <DotContainer>
-        {current > 0 && <Dot arrow onClick={goPrev}>&lt;</Dot>}
+        {current > 0 && (
+          <Dot arrow onClick={goPrev}>
+            <FiChevronLeft size="1.25em" />
+          </Dot>
+        )}
         <Dot center />
-        <Dot arrow onClick={goNext}>&gt;</Dot>
+        {current < lastIndex && (
+          <Dot arrow onClick={goNext}>
+            <FiChevronRight size="1.25em" />
+          </Dot>
+        )}
       </DotContainer>
     </Section>
   );

@@ -1,8 +1,8 @@
-// src/styles/OurStoriesMedia.js
 import styled from 'styled-components';
 
 export const CarouselWrapper = styled.div`
   display: none;
+
   @media (max-width: 768px) {
     display: block;
     position: relative;
@@ -19,10 +19,17 @@ export const SlidesContainer = styled.div`
 export const Slide = styled.div`
   flex: 0 0 100%;
   width: 100%;
+
+  /* center the card inside each slide */
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const DotContainer = styled.div`
   display: none;
+
   @media (max-width: 768px) {
     display: flex;
     justify-content: center;
@@ -46,8 +53,6 @@ export const Dot = styled.button`
 
   &:hover {
     ${({ center, arrow }) =>
-      !center && arrow
-        ? `background: rgba(16,24,32,0.1);`
-        : ''}
+      !center && arrow ? `background: rgba(16,24,32,0.1);` : ''}
   }
 `;

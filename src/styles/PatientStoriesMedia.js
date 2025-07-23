@@ -18,7 +18,7 @@ import {
 
 export const ResponsiveSection = styled(Section)`
   @media (max-width: 768px) {
-    padding: 60px 16px;
+    padding: 100px 20px;
   }
 `;
 

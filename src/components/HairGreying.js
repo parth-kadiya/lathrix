@@ -10,10 +10,10 @@ import {
   ListItem,
   ImageWrapper,
   StyledImage
-} from '../styles/AcneMedia';
-import acneImg from '../assets/hair.png';
+} from '../styles/HairGreyingMedia';
+import HairgreyingImg from '../assets/hair.png';
 
-const Acne = () => (
+const HairGreying = () => (
   <Section>
     <Content>
       <SmallLabel>GREYING</SmallLabel>
@@ -49,9 +49,9 @@ const Acne = () => (
     </Content>
 
     <ImageWrapper>
-      <StyledImage src={acneImg} alt="Hair Before & After" />
+      <StyledImage src={HairgreyingImg} alt="Hair Before & After" />
     </ImageWrapper>
   </Section>
 );
 
-export default Acne;
+export default HairGreying;
